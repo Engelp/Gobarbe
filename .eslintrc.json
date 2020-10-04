@@ -40,8 +40,5 @@
       "import/resolver": {
         "typescript": {}
       }
-    },
-    "compilerOptions": {
-      "chekJs": false
     }
 }

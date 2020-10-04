@@ -1,4 +1,3 @@
-import { addWeeks } from 'date-fns';
 // Rota: Receber uma requisição, chamar outro arquivo, devolver uma resposta
 
 import { Router } from 'express';
