@@ -3,6 +3,8 @@ import { getCustomRepository } from 'typeorm';
 import Appointment from '../models/Appointments';
 import AppointmentsRepository from '../repositories/AppointmentsRepository';
 
+import AppError from '../errors/AppError';
+
 /**
  * Recebimento das informações
  * Tratativa de erro/excessões
@@ -37,7 +39,7 @@ class CreateAppointmentService {
     // Se não estiver data disponínel, retorne um erro.
 
     if (findAppointmentInSameDate) {
-      throw Error('is apThpointment is already booked');
+      throw new AppError('is apThpointment is already booked');
     }
 
     // Cria o agendamento
