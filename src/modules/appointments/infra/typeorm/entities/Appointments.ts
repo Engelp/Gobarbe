@@ -11,7 +11,7 @@ import {
 //  Entity -> A classe abaixo passa a ser os parâmetros parar ser enviado para
 //  o banco de dados, disponivel somente no TypeScript.
 
-import User from './user';
+import User from '@modules/users/infra/typeorm/entities/user';
 
 /**
  *  Um para Um (OneToOne)
