@@ -9,7 +9,6 @@ import CreateAppointmentService from '@modules/appointments/services/CreateAppoi
 import ensureAuthenticated from '@modules/users/infra/http/middlewares/ensureAuthenticated';
 
 const appointmentsRouter = Router();
-const appointmentsRepository = new AppointmentsRepository();
 
 // SoC: Separations of Cocerns (Separação de preoucupações)
 // DTO: Data Transfer Object
@@ -26,7 +25,7 @@ appointmentsRouter.post('/', async (req, res) => {
   const { provider_id, date } = req.body;
 
   // parseISO: Transformando os dados que está vindo do body de string para uma data.
-
+  const appointmentsRepository = new AppointmentsRepository();
   const parsedDate = parseISO(date);
 
   // Resposta construida em um service
