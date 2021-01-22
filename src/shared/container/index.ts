@@ -14,6 +14,6 @@ container.registerSingleton<IAppointmentsRepository>(
 );
 
 container.registerSingleton<IUsersRepository>(
-  'UserssRepository',
+  'UsersRepository',
   UsersRepository,
 );
